@@ -1,7 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { options } from '@/lib/options';
 import { HomeIcon, User2Icon } from 'lucide-react';
-import { getServerSession } from 'next-auth';
 import Link from 'next/link';
 import React from 'react'
 
@@ -43,7 +41,7 @@ const Header = async () => {
             <img src="./icon.png" alt="logo" width={70} height={70}/>
             <div className=' flex justify-center items-center flex-row gap-5'>
                 {data.map((item : any , index : any) => (
-                <Link href={item.route}>
+                <Link href={item.route} key={index}>
                     <div key={index} className=' hover:scale-105 cursor-pointer hover:text-green-800' style={{transition:'0.5s'}}> 
                         {item.title}
                     </div>
