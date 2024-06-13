@@ -16,7 +16,7 @@ const FromPast = () => {
         </h4>
         <div className='md:grid md:grid-cols-4 md:gap-7 mt-5 flex justify-center items-center flex-col gap-3'>
          {data.map((item : any , index : any) => (
-            <div> 
+            <div key={index}> 
                 	<div className="group overflow-hidden bg-neutral-50 rounded-xl bg-gradient-to-tr from-cyan-800 via-cyan-700 to-cyan-500 text-gray-50" style={{ 
   backgroundImage: `url("${item}")`,
   backgroundSize: "cover",

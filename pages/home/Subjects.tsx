@@ -40,7 +40,7 @@ const Subjects = () => {
         </p>
         <div className='md:grid md:grid-cols-4 md:gap-7 mt-5 flex justify-center items-center flex-col gap-3'>
           {data.map((item : any , index : any) => (
-            <div> 
+            <div key={index}> 
 <div
   className="relative overflow-hidden w-60 h-80 rounded-3xl cursor-pointer text-2xl font-bold bg-green-400"
 >
