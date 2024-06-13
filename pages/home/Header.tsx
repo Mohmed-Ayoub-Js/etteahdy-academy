@@ -6,7 +6,6 @@ import Link from 'next/link';
 import React from 'react'
 
 const Header = async () => {
-  const session = await getServerSession(options);
   const data = [
     {
         title:'الرئيسية',
@@ -34,11 +33,11 @@ const Header = async () => {
       icon: <HomeIcon />,      
     },
     {
-      title: session ? 'حسابي' :  'تسجيل الدخول',
-      route: session ? '/profile' :  '/api/auth/signin',
+      title:"تسجيل الدخول",
+      route: "/login",
       icon: <HomeIcon />,      
     },
-  ];//'/api/auth/signin'
+  ];
   return (
     <div className='p-2 flex justify-between items-center flex-row gap-5 '>
             <img src="./icon.png" alt="logo" width={70} height={70}/>
@@ -51,10 +50,10 @@ const Header = async () => {
                 </Link>
                 ))}
             </div>
-            <Link href={session ? '/profile' :  '/api/auth/signin'}>
+            <Link href={"/login"}>
               
             <Button>
-           {session ? (<User2Icon />) : 'تسجيل الدخول'}
+          تسجيل الدخول
             </Button></Link>
     </div>
   )
