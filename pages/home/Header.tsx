@@ -1,9 +1,9 @@
 import { Button } from '@/components/ui/button';
-import { HomeIcon, User2Icon } from 'lucide-react';
+import { HomeIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react'
 
-const Header = async () => {
+const Header =  () => {
   const data = [
     {
         title:'الرئيسية',
@@ -49,10 +49,10 @@ const Header = async () => {
                 ))}
             </div>
             <Link href={"/login"}>
-              
             <Button>
           تسجيل الدخول
-            </Button></Link>
+            </Button>
+            </Link>
     </div>
   )
 }
